@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-12-29T05:39:00.400Z",
-    "end": "2022-12-29T05:39:17.231Z",
-    "duration": 16831,
+    "start": "2022-12-29T10:05:35.013Z",
+    "end": "2022-12-29T10:05:46.171Z",
+    "duration": 11158,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "c9394a25-75cd-44eb-acb3-7703f8cce8d8",
+      "uuid": "2a076101-9c35-434b-8626-7ad0fb48c996",
       "title": "",
       "fullFile": "cypress\\integration\\examples\\Test8Framework.js",
       "file": "cypress\\integration\\examples\\Test8Framework.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "1398709c-4cdf-49b2-a60d-5d0f1379a58b",
+          "uuid": "09fedcfb-22e8-483d-b209-ea4f705531a6",
           "title": "My Second Test Suite",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,29 @@
               "title": "My FirstTest case",
               "fullTitle": "My Second Test Suite My FirstTest case",
               "timedOut": null,
-              "duration": 13722,
+              "duration": 8936,
               "state": "passed",
-              "speed": "slow",
+              "speed": "medium",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "const homePage = new _HomePage.default();\nconst productPage = new _ProductPage.default();\ncy.visit(Cypress.env('url') + \"/angularpractice/\");\nhomePage.getEditBox().type(this.data.name);\nhomePage.getGender().select(this.data.gender);\nhomePage.getTwoWayDataBinding().should('have.value', this.data.name);\nhomePage.getEditBox().should('have.attr', 'minlength', '2');\nhomePage.getEntrepreneaur().should('be.disabled');\nhomePage.getShopTab().click();\nCypress.config('defaultCommandTimeout', 8000);\nthis.data.productName.forEach(function (element) {\n  cy.selectProduct(element);\n});\nproductPage.checkOutButton().click();\nvar sum = 0;\ncy.get('tr td:nth-child(4) strong').each(($el, index, $list) => {\n  const amount = $el.text();\n  var res = amount.split(\" \");\n  res = res[1].trim();\n  sum = Number(sum) + Number(res);\n}).then(function () {\n  cy.log(sum);\n});\ncy.get('h3 strong').then(function (element) {\n  const amount = element.text();\n  var res = amount.split(\" \");\n  var total = res[1].trim();\n  expect(Number(total)).to.equal(sum);\n});\ncy.contains('Checkout').click();\ncy.get('#country').type('India');\ncy.get('.suggestions > ul > li > a').click();\ncy.get('#checkbox2').click({\n  force: true\n});\ncy.get('input[type=\"submit\"]').click();\n//cy.get('.alert').should('have.text','Success! Thank you! Your order will be delivered in next few weeks :-)\ncy.get('.alert').then(function (element) {\n  const actualText = element.text();\n  expect(actualText.includes(\"Success\")).to.be.true;\n});",
               "err": {},
-              "uuid": "3c657a26-622c-455e-9c2f-719b2f7a6e20",
-              "parentUUID": "1398709c-4cdf-49b2-a60d-5d0f1379a58b",
+              "uuid": "d49c0029-5210-4d83-8011-c7a6bcc2c6bf",
+              "parentUUID": "09fedcfb-22e8-483d-b209-ea4f705531a6",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "3c657a26-622c-455e-9c2f-719b2f7a6e20"
+            "d49c0029-5210-4d83-8011-c7a6bcc2c6bf"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 13722,
+          "duration": 8936,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
