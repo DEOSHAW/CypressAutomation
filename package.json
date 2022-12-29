@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npx cypress run --reporter mochawesome",
     "headTest": "npm run test -- --headed --reporter mochawesome",
-    "chromeTest": "npm run test -- --browser chrome --reporter mochawesome",
+    "chromeTest": "npm run test -- --headed --browser chrome --reporter mochawesome",
     "frameworkTest": "npm run test -- --browser chrome --spec cypress\\integration\\examples\\Test8Framework.js --reporter mochawesome",
     "dashboardTest": "npm run test -- --record --key aa46c183-ab55-4b05-b1a0-961cdd0fd2be --reporter mochawesome"
   },
@@ -15,7 +15,6 @@
   "license": "ISC",
   "devDependencies": {
     "cypress": "^12.2.0",
-    "cypress-iframe": "^1.0.1",
-    "mochawesome": "^7.1.3"
+    "cypress-iframe": "^1.0.1"
   }
 }
