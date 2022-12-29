@@ -6,6 +6,10 @@ module.exports = defineConfig({
   {
     url: "https://rahulshettyacademy.com"
   },
+  retries: {
+    runMode:1,
+    openMode:0
+  },
   projectId: "1sr8sx",
   e2e: {
     setupNodeEvents(on, config) {
