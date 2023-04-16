@@ -11,3 +11,6 @@ To run scripts:
 npm run <Script Name>
     e.g: npm run dashboardTest
 
+To run specific spec file:
+npx cypress run --spec <Spec file name>
+npx cypress run --spec .\cypress\integration\examples\APITests\GoRestAPITests.js
