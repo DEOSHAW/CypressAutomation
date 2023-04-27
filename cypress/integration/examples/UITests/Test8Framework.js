@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
-import HomePage from '../../support/pageObjects/HomePage'
-import ProductPage from '../../support/pageObjects/ProductPage'
+import HomePage from '/CypressAutomation/cypress/support/pageObjects/HomePage'
+import ProductPage from '/CypressAutomation/cypress/support/pageObjects/ProductPage'
 describe('My Second Test Suite', function () {
 
   before(function () {
@@ -64,25 +64,11 @@ describe('My Second Test Suite', function () {
       expect(actualText.includes("Success")).to.be.true
     })
 
+ })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  })
+ after(function(){
+  
+ })
 })
 
 
