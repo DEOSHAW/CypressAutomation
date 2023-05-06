@@ -11,7 +11,12 @@
 //
 // -- This is a parent command --
 // Cypress.Commands.add("login", (email, password) => { ... })
+
+
 //
+/// <reference types="Cypress" />
+/// <reference types="cypress-xpath" />
+
 
 Cypress.Commands.add("selectProduct", (productName) => { 
     cy.get('h4.card-title').each(($el, index, $list) => {
