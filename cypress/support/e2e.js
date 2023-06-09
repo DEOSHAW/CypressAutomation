@@ -19,3 +19,28 @@ import './commands'
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 require('cypress-xpath');
+
+beforeEach('Launch Browser',()=>{
+    cy.log('Launching Browser');
+    cy.visit(Cypress.env('url')+"/angularpractice/")
+  })
+
+  before(function () {
+    // runs once before all tests in the block
+    cy.log('Loading Test Data');
+    cy.fixture('example').then(function (data) {
+      this.data = data
+    })
+  })
+
+  afterEach('Scenario Completed',()=>{
+
+    cy.log("Scenario Completed")
+
+  })
+
+  after(function(){
+
+    cy.log("All tests completed")
+  
+  })

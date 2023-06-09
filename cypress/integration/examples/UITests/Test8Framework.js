@@ -3,19 +3,12 @@ import HomePage from '/CypressAutomation/cypress/support/pageObjects/HomePage'
 import ProductPage from '/CypressAutomation/cypress/support/pageObjects/ProductPage'
 describe('My Second Test Suite', function () {
 
-  before(function () {
-    // runs once before all tests in the block
-    cy.fixture('example').then(function (data) {
-      this.data = data
-    })
-  })
 
 
-
-  it('My FirstTest case', function () {
+    it('My FirstTest case', function () {
     const homePage = new HomePage()
     const productPage = new ProductPage()
-   cy.visit(Cypress.env('url')+"/angularpractice/")
+   //cy.visit(Cypress.env('url')+"/angularpractice/")
     homePage.getEditBox().type(this.data.name)
     homePage.getGender().select(this.data.gender)
     homePage.getTwoWayDataBinding().should('have.value', this.data.name)
@@ -66,9 +59,7 @@ describe('My Second Test Suite', function () {
 
  })
 
- after(function(){
-  
- })
+
 })
 
 
