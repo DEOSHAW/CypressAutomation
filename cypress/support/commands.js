@@ -16,6 +16,7 @@
 //
 /// <reference types="Cypress" />
 /// <reference types="cypress-xpath" />
+require('cypress-xpath');
 
 
 Cypress.Commands.add("selectProduct", (productName) => { 

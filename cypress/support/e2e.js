@@ -18,11 +18,10 @@ import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
-require('cypress-xpath');
 
 beforeEach('Launch Browser',()=>{
     cy.log('Launching Browser');
-    cy.visit(Cypress.env('url')+"/angularpractice/")
+    //cy.visit(Cypress.env('url')+"/angularpractice/")
   })
 
   before(function () {
