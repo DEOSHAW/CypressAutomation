@@ -19,7 +19,8 @@ describe('Test Suite',()=>{
 
         cy.get('#name').invoke('val','Deo Shaw');
         cy.wait(2000);
-        cy.get('#name').type('{backspace}')
+        cy.get('#name').type('{backspace}');
+        cy.get('#name').click().type('{selectall}');
         cy.get('#alertbtn').click();
         cy.on('window:alert',(str)=>{
             expect(str).to.include(data.alertMessage);
