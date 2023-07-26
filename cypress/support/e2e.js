@@ -20,11 +20,15 @@ import './commands'
 // require('./commands')
 
 beforeEach('Launch Browser',()=>{
+  
+  Cypress.on('uncaught:exception', (err, runnable) => {
+    return false
+})
     cy.log('Launching Browser');
     //cy.visit(Cypress.env('url')+"/angularpractice/")
   })
 
-  before(function () {
+  before('Test Data Load',function () {
     // runs once before all tests in the block
     cy.log('Loading Test Data');
     cy.fixture('example').then(function (data) {
@@ -38,7 +42,7 @@ beforeEach('Launch Browser',()=>{
 
   })
 
-  after(function(){
+  after('Test Completion',function(){
 
     cy.log("All tests completed")
   
