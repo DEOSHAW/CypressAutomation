@@ -4,5 +4,7 @@
   "body": "Fixtures are a great way to mock data for responses to routes",
  "gender":"Female",
  "productName": ["Blackberry","Nokia Edge"],
- "alertMessage":"Hello Deo Sha, share this practice page and share your knowledge"
+ "alertMessage":"Hello Deo Sha, share this practice page and share your knowledge",
+ "userName": "Admin",
+ "passWord": "admin123"
 }

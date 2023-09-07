@@ -19,31 +19,33 @@ import './commands'
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
-beforeEach('Launch Browser',()=>{
-  
+// before('Test Data Load', function () {
+//   // runs once before all tests in the block
+//   cy.log('Loading Test Data');
+//   cy.fixture('example').then(function (data) {
+//     this.data = data
+//   })
+// })
+
+beforeEach('Launch Browser', () => {
+
   Cypress.on('uncaught:exception', (err, runnable) => {
     return false
+  })
+  cy.log('Launching Browser');
+  //cy.visit(Cypress.env('url')+"/angularpractice/")
 })
-    cy.log('Launching Browser');
-    //cy.visit(Cypress.env('url')+"/angularpractice/")
-  })
 
-  before('Test Data Load',function () {
-    // runs once before all tests in the block
-    cy.log('Loading Test Data');
-    cy.fixture('example').then(function (data) {
-      this.data = data
-    })
-  })
 
-  afterEach('Scenario Completed',()=>{
 
-    cy.log("Scenario Completed")
+afterEach('Scenario Completed', () => {
 
-  })
+  cy.log("Scenario Completed")
 
-  after('Test Completion',function(){
+})
 
-    cy.log("All tests completed")
-  
-  })
+// after('Test Completion', function () {
+
+//   cy.log("All tests completed")
+
+// })
