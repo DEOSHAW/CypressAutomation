@@ -4,7 +4,7 @@ describe('Test Suite',()=>{
         cy.visit('https://www.guidewire.com/');
         cy.get('#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll').click();
         cy.wait(1000);
-       cy.xpath("//a[contains(@href,'/products')]").each((el,index,list)=>{
+        cy.xpath("//a[contains(@href,'/products')]").each((el,index,list)=>{
             
            if(index<16)
            {
