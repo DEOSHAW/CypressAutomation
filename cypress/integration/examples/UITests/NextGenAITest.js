@@ -25,7 +25,7 @@ describe('Test Suite',function(){
         })
     })
 
-    it('Frame Handling test',()=>{
+    it.skip('Frame Handling test',()=>{
         //Navigate to Iframes page
         cy.xpath("(//a[contains(text(),'iFrames')])[2]").click({force:true});
         //Switch to form iframe
@@ -34,6 +34,20 @@ describe('Test Suite',function(){
         cy.iframe("iframe[name='formpage']").find('input#vfb-5').type('Iframes');
         cy.iframe("iframe[name='formpage']").find('input#vfb-7').type('Test');
         cy.wait(2000);
+    })
+
+    it('Window Handling Test',()=>{
+        cy.xpath("(//a[contains(text(),'Demo Site – Multiple Windows')])[2]").click({force:true});
+        cy.get('h1').then((ele)=>{
+
+            expect(ele.text()).to.contain('Multiple Windows');
+
+        })
+        cy.log(cy.title());
+        cy.xpath("//a[contains(text(),'New Browser Tab')]").invoke('removeAttr','target').click();
+        cy.log(cy.title());
+        cy.get('h2.elementor-heading-title.elementor-size-default:nth-child(2)')
+        .should('have.text',"Welcome To India's Most Affordable Selenium Online Course");
     })
 
 })

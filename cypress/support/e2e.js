@@ -27,12 +27,12 @@ import './commands'
 //   })
 // })
 
-beforeEach('Launch Browser', () => {
+beforeEach('Handle Uncaught Exception', () => {
 
   Cypress.on('uncaught:exception', (err, runnable) => {
     return false
   })
-  cy.log('Launching Browser');
+  //cy.log('Launching Browser');
   //cy.visit(Cypress.env('url')+"/angularpractice/")
 })
 
