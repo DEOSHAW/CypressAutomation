@@ -12,6 +12,9 @@ module.exports = defineConfig({
     runMode:1,
     openMode:0
   },
+  //video: true,
+  //videoCompression: 32,
+ // videoUploadOnPasses: true,
   projectId: "1sr8sx",
   e2e: {
     setupNodeEvents(on, config) {
