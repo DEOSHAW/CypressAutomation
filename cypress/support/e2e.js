@@ -32,9 +32,16 @@ beforeEach('Handle Uncaught Exception', () => {
   Cypress.on('uncaught:exception', (err, runnable) => {
     return false
   })
+
+  /*Cypress.on('fail', (err, runnable) => {
+    console.log(err.message);
+    return false;
+  });*/
+  
   //cy.log('Launching Browser');
   //cy.visit(Cypress.env('url')+"/angularpractice/")
 })
+
 
 
 
