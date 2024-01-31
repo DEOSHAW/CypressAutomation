@@ -28,6 +28,8 @@ import './commands'
 // })
 
 beforeEach('Handle Uncaught Exception', () => {
+  
+  cy.log("Scenario Started")
 
   Cypress.on('uncaught:exception', (err, runnable) => {
     return false
