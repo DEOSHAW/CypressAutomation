@@ -3,15 +3,24 @@ import HomePage from '/CypressAutomation/cypress/support/pageObjects/HomePage'
 import ProductPage from '/CypressAutomation/cypress/support/pageObjects/ProductPage'
 describe('My Second Test Suite', function () {
 
+  let data;
+
+    before('Get Test Data',()=>{
+        cy.fixture('example').then((fData)=>{
+            data=fData;
+
+        })
+    })
+
 
 
     it('My FirstTest case', function () {
     const homePage = new HomePage()
     const productPage = new ProductPage()
     cy.visit(Cypress.env('url')+"/angularpractice/")
-    homePage.getEditBox().type(this.data.name)
-    homePage.getGender().select(this.data.gender)
-    homePage.getTwoWayDataBinding().should('have.value', this.data.name)
+    homePage.getEditBox().type(data.name)
+    homePage.getGender().select(data.gender)
+    homePage.getTwoWayDataBinding().should('have.value', data.name)
     homePage.getEditBox().should('have.attr', 'minlength', '2')
     homePage.getEntrepreneaur().should('be.disabled')
     homePage.getShopTab().click()
@@ -21,7 +30,7 @@ describe('My Second Test Suite', function () {
 
 
 
-    this.data.productName.forEach(function (element) {
+    data.productName.forEach(function (element) {
 
       cy.selectProduct(element)
     });
