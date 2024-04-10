@@ -1,10 +1,21 @@
-describe('Test Suite',()=>{
-    it('Nested Frames Switching Demo',()=>{
-        //cy.viewport(1000,660);
+describe('Test Suite', () => {
+
+    let data;
+
+    before('Get Test Data', () => {
+        cy.fixture('example').then((fData) => {
+            data = fData;
+
+        })
+    })
+    beforeEach('Launch Portal', () => {
         cy.visit('https://demo.automationtesting.in/Index.html');
         cy.get('button#btn2').click();
-        cy.xpath("//a[text()='Frames']").click({force:true});
-        cy.xpath("//a[text()='Iframe with in an Iframe']").click({force:true});
+
+    })
+    it('Nested Frames Switching Demo', () => {
+        cy.xpath("//a[text()='Frames']").click({ force: true });
+        cy.xpath("//a[text()='Iframe with in an Iframe']").click({ force: true });
 
         cy.get('div#Multiple>iframe')
             .its('0.contentDocument')
@@ -13,9 +24,12 @@ describe('Test Suite',()=>{
             .its('0.contentDocument')
             .its('body')
             .find("input[type='text']").type('Frames');
-       
-        
 
+    })
+
+    it('Input Country Demo', () => {
+        cy.xpath("//a[normalize-space(text())='AutoComplete']").click({ force: true });
+        cy.get('#searchbox').type(data.country);
 
     })
 })

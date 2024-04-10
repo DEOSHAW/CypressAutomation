@@ -7,5 +7,6 @@
  "alertMessage":"Hello Deo Sha, share this practice page and share your knowledge",
  "userName": "Admin",
  "passWord": "admin123",
- "product": "Books"
+ "product": "Books",
+ "country": "India"
 }
