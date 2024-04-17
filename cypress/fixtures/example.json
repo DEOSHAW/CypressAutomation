@@ -8,5 +8,6 @@
  "userName": "Admin",
  "passWord": "admin123",
  "product": "Books",
- "country": "India"
+ "country": "India",
+ "booksName":["Functional Programming in JS","Selenium Ruby"]
 }
