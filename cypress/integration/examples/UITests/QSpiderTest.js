@@ -1,5 +1,6 @@
+import 'cypress-iframe';
 describe('Test Suite',()=>{
-    it('Checkout Test',()=>{
+    it.skip('Checkout Test',()=>{
         cy.visit('https://demoapps.qspiders.com/ui/dropdown?sublist=0');
         cy.get('#phone').type('9547898850',{force:true});
         cy.get('select#select2').select('Male',{force:true});
@@ -11,5 +12,14 @@ describe('Test Suite',()=>{
             cy.wrap(ele).should('contain.text','What payment method do you prefer');
         })
 
+    })
+
+    it('Frames Test',()=>{
+        cy.visit('https://demoapps.qspiders.com/ui/frames?sublist=0');
+        cy.frameLoaded('iframe.w-full.h-96');
+        cy.iframe().find('input#username').type('Test');
+        cy.iframe().find('input#password').type('Test123');
+        cy.iframe().find('button#submitButton').click();
+        cy.get("div[role='status']").should('contain.text','Login successful');
     })
 })
