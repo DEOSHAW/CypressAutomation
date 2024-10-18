@@ -14,12 +14,21 @@ describe('Test Suite',()=>{
 
     })
 
-    it('Frames Test',()=>{
+    it.skip('Frames Test',()=>{
         cy.visit('https://demoapps.qspiders.com/ui/frames?sublist=0');
         cy.frameLoaded('iframe.w-full.h-96');
         cy.iframe().find('input#username').type('Test');
         cy.iframe().find('input#password').type('Test123');
         cy.iframe().find('button#submitButton').click();
         cy.get("div[role='status']").should('contain.text','Login successful');
+    })
+
+    it('Accordion Test',()=>{
+        cy.visit('https://demoapps.qspiders.com/ui/accordion?sublist=0&scenario=1');
+        cy.xpath("//p[text()='Section 3']/parent::div").click({force:true});
+        cy.xpath("(//div[contains(text(),'Lorem ipsum dolor sit amet')])[1]")
+        .should('contain.text','Lorem ipsum dolor sit amet, consectetur adipiscing elit');
+        
+
     })
 })
