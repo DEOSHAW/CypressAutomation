@@ -10,5 +10,6 @@
  "product": "Books",
  "country": "India",
  "region": "West Bengal",
- "booksName":["Functional Programming in JS","Selenium Ruby"]
+ "booksName":["Functional Programming in JS","Selenium Ruby"],
+ "searchTerm": "Rankings"
 }
