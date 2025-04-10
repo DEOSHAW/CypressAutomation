@@ -6,4 +6,10 @@ describe('Test Suite',()=>{
         cy.get('button#myButton').should('have.attr','style','color: purple;');
 
     })
+
+    it('Type in prefilled text',()=>
+    {
+        cy.visit('https://seleniumbase.io/demo_page/');
+        cy.get('input#myTextInput2').clear().type('Test Data');
+    })
 })
