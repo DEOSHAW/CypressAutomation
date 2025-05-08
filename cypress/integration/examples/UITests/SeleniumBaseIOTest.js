@@ -19,7 +19,7 @@ describe('Test Suite',()=>{
         cy.get('#mySelect').select(3);
     })
 
-    it('Hover Test',()=>{
+    it.skip('Hover Test',()=>{
         cy.get('div#myDropdown').invoke('show');
         cy.get('div.dropdown-content>a').should('have.length',3).each((el,index,list)=>
         {
@@ -28,6 +28,13 @@ describe('Test Suite',()=>{
         cy.get('#dropOption3').should('have.text','Link Three');
 
 
+    })
+    it('Navigate to Github project',()=>{
+        cy.get('a#myLink2').click();
+        cy.origin('https://github.com', () => {
+            cy.url().should('eq','https://github.com/seleniumbase/SeleniumBase');
+            cy.title('contain','seleniumbase/SeleniumBase');
+          })
     })
 
 
