@@ -1,4 +1,12 @@
 describe('Heroku Test suite',function(){
+
+    it('Select from Dropdown',()=>{
+            cy.visit('https://the-internet.herokuapp.com/dropdown');
+            cy.get('select#dropdown').select('Option 1');
+            cy.get('select#dropdown');
+            cy.get('h3').should('have.text','Dropdown List');
+        })
+
  
     it('Test-Dynamic element loading',()=>{
         cy.visit('https://the-internet.herokuapp.com/dynamic_loading');
@@ -11,6 +19,7 @@ describe('Heroku Test suite',function(){
 
         })
 
+        
         
     })
 })
