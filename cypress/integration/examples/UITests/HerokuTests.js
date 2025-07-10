@@ -1,7 +1,12 @@
 import 'cypress-file-upload';
 describe('Heroku Test suite', function () {
 
-    it('Upload File Test', () => {
+    it('Drag and Drop Page Validation',()=>{
+        cy.visit('https://the-internet.herokuapp.com/drag_and_drop');
+        cy.get('h3').should('have.text','Drag and Drop');
+    })
+
+    it.skip('Upload File Test', () => {
             cy.visit('https://the-internet.herokuapp.com/upload');
             cy.get('input#file-upload').attachFile('Test1.txt');
             cy.get('input#file-submit').click();

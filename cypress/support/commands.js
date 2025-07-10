@@ -11,10 +11,6 @@
 //
 // -- This is a parent command --
 // Cypress.Commands.add("login", (email, password) => { ... })
-
-
-//
-/// <reference types="Cypress" />
 /// <reference types="cypress-xpath" />
 require('cypress-xpath');
 
