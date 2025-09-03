@@ -1,6 +1,5 @@
-/// <reference types="Cypress" />
-import HomePage from '/CypressAutomation/cypress/support/pageObjects/HomePage'
-import ProductPage from '/CypressAutomation/cypress/support/pageObjects/ProductPage'
+import HomePage from '/CypressAutomation/cypress/support/pageObjects/HomePage.js'
+import ProductPage from '/CypressAutomation/cypress/support/pageObjects/ProductPage.js'
 describe('My Second Test Suite', function () {
 
   let data;

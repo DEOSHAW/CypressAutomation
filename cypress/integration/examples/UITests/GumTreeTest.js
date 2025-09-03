@@ -1,4 +1,4 @@
-import GumTree from "../../../support/pageObjects/GumTree"; 
+import GumTree from "../../../support/pageObjects/GumTree.js"; 
 
 describe('Test Suite',()=>{
     const gumtreeObject=new GumTree();

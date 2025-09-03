@@ -1,4 +1,4 @@
-import MLC from "../../../support/pageObjects/MLC";
+import MLC from "../../../support/pageObjects/MLC.js";
 describe('Test Suite',()=>{
     it('GetTeamRoster',()=>{
 

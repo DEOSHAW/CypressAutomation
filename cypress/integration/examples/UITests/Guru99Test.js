@@ -1,5 +1,5 @@
 import 'cypress-file-upload';
-import Guru99 from '../../../support/pageObjects/Guru99';
+import Guru99 from '../../../support/pageObjects/Guru99.js';
 describe('Test Suite',()=>{
     it.only('File Upload Test',()=>
     {

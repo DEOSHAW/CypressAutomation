@@ -13,11 +13,8 @@
 // https://on.cypress.io/configuration
 // ***********************************************************
 
-// Import commands.js using ES2015 syntax:
-import './commands'
-
-// Alternatively you can use CommonJS syntax:
-// require('./commands')
+// Use CommonJS syntax instead of ESM
+import './commands.js';
 
 // before('Test Data Load', function () {
 //   // runs once before all tests in the block
@@ -28,33 +25,25 @@ import './commands'
 // })
 
 beforeEach('Handle Uncaught Exception', () => {
-  
-  cy.log("Scenario Started")
+  cy.log("Scenario Started");
 
   Cypress.on('uncaught:exception', (err, runnable) => {
-    return false
-  })
+    return false;
+  });
 
-  /*Cypress.on('fail', (err, runnable) => {
+  /* Cypress.on('fail', (err, runnable) => {
     console.log(err.message);
     return false;
-  });*/
-  
-  //cy.log('Launching Browser');
-  //cy.visit(Cypress.env('url')+"/angularpractice/")
-})
+  }); */
 
-
-
+  // cy.log('Launching Browser');
+  // cy.visit(Cypress.env('url') + "/angularpractice/")
+});
 
 afterEach('Scenario Completed', () => {
-
-  cy.log("Scenario Completed")
-
-})
+  cy.log("Scenario Completed");
+});
 
 // after('Test Completion', function () {
-
 //   cy.log("All tests completed")
-
 // })

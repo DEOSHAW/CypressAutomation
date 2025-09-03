@@ -1,4 +1,4 @@
-import NextGenAI from "../../../support/pageObjects/NextGenAI";
+import NextGenAI from "../../../support/pageObjects/NextGenAI.js";
 
 describe('Test Suite',()=>{
     const nextGenAI=new NextGenAI();

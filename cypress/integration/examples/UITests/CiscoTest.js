@@ -1,4 +1,5 @@
-import Cisco from "../../../support/pageObjects/Cisco";
+import Cisco from "../../../support/pageObjects/Cisco.js";
+
 
 describe('Test Suite',()=>{
     var cisco=new Cisco();

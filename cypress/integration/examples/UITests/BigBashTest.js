@@ -1,4 +1,4 @@
-import BigBash from "../../../support/pageObjects/BigBash";
+import BigBash from "../../../support/pageObjects/BigBash.js";
 
 describe('Test Suite', () => {
     const bigBash=new BigBash();

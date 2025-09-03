@@ -1,4 +1,4 @@
-import UCBerkeley from "../../../support/pageObjects/UCBerkeley";
+import UCBerkeley from "../../../support/pageObjects/UCBerkeley.js";
 describe('Test Suite', () => {
     const ucbk = new UCBerkeley();
     it('Get Reserach Unit', () => {
