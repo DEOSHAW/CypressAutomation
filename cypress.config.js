@@ -5,6 +5,7 @@ module.exports = defineConfig({
   viewportWidth:1920,
   viewportHeight:1080,
   includeShadowDom: true,
+  chromeWebSecurity: false,
   env:
   {
     url: "https://rahulshettyacademy.com"
