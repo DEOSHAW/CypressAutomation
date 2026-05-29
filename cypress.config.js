@@ -8,7 +8,8 @@ module.exports = defineConfig({
   includeShadowDom: true,
   env:
   {
-    url: "https://rahulshettyacademy.com"
+    url: "https://rahulshettyacademy.com",
+    uploadFile: "Test1.txt"
   },
   retries: {
     runMode:1,
