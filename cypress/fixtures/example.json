@@ -12,5 +12,7 @@
  "region": "West Bengal",
  "booksName":["Functional Programming in JS","Selenium Ruby"],
  "searchTerm": "Rankings",
- "fruit":"Apple"
+ "fruit":"Apple",
+ "course_name":"Computer Science",
+ "course_level":"Postgraduate taught"
 }
